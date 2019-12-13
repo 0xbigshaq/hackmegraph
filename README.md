@@ -19,4 +19,4 @@ If you don't already have a local mysql and node images, it might take a minute 
 
 
 ## Contact
-Twitter: [@0x_shaq](//twitter.com/0x_shaq)# hackmegraph
+Twitter: [@0x_shaq](//twitter.com/0x_shaq)
