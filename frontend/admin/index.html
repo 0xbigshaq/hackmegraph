@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Admin Page</title>
+        <!-- scroll down for a hint -->
+        <style>
+.shoutout { 
+    padding: 5px;
+    margin: 10px 10px 0;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d5da;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  button {
+    border-radius: 2px 2px 2px 2px;
+    color: #24292e;
+      background-color: #eff3f6;
+      background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+  }
+  
+  .input {
+    
+    padding: 2px 2px 2px 2px;
+    margin: 2px 2px 2px 2px;
+  }
+  
+  
+  .date { 
+    font-size:11px;
+    color: rgb(189, 138, 9);
+  }
+
+        </style>
+        <script src="main.js"></script>
+    </head>
+    <body onload=getShoutouts()> 
+        <h1 style='display: inline;'>Welcome to the Admin Back-Office Portal</h1> <a href='#' onclick='logout()'>Logout</a> <br />
+        <code>Congrats! You managed to elevate your privileges. Want to take it a step further? <Br />
+        <b>Final goal:</b> Remote Code Execution. good luck :)</code>
+        <hr />
+
+        <select id='approved' name='approved' onchange=getShoutouts()>
+                <option value='true'>Approved</option>
+                <option value='false'>Pending</option>
+        </select>
+        
+        <div id='feed'><!--js output goes here--></div>
+    </body>
+</html>
+<!--
+    scroll down for the hint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   try to map the admin graphql schema to see everything organized...maybe you'll get a better prespective. 
+-->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MyShoutouts</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <script src="js/app.js"></script>
+
+</head>
+
+<body id="page-top" onload=getApproved();>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">MyShoutout</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#apply">Apply</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#status">Status</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to MyShoutout</h1>
+      <p class="lead">Get your fame</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About this app</h2>
+          <p class="lead">In order to get to post a shout-out, you will have to fill the form below. 
+              Once the Website Administrator will approve your request, your shout-out will be posted in
+              the main page. 
+              <p />
+              Approved shout-outs ( <button id="refreshlist" onclick="getApproved()">refresh list</button>) :    
+        </p>
+
+
+        <div id="feed">
+            <!-- output here -->
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Apply for a Shoutout</h2>
+          <p class="lead">
+
+            From: <input type='text' class='input' id='from_input' />
+            <br />
+            Shoutout Messaage: <input type='text' class='input' id='message_input' style='width:100%' />
+            <p />
+            <button id='send' onclick='sendShoutout()'>Send shoutout</button>
+          </p>
+          <div id='send_output'></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="status">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Check your request status</h2>
+          <p class="lead">Request ID: <input type='text' size=12 class='input' id='tracking_id'> <button id='checkstatus' onclick='checkStatus()'> Check </button></p>
+ 
+          <div id='status_output'>
+              <!-- goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; <a href='https://appsec-labs.com/'>AppSec Labs</a> </p>
+      <span style='color:#ffffff'>Follow me on twitter <code><a style='color:lightseagreen' href='//twitter.com/0x_shaq'>@0x_shaq</a></code></span>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

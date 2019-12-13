@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  hackmelab:
+    build: .
+    volumes:
+      - .:/shaq/app
+    ports:
+      - 3001:3001
+    depends_on: 
+      - hackmedb
+    command: /bin/sh -c "npm install; echo waitingforinitmysql; sleep 20; echo done; npm start"
+    environment: 
+      JWT_SECRET: shaq2019
+  
+  hackmedb:
+    image: mysql:5.7
+    environment: 
+      MYSQL_DATABASE: hackmegraph
+      MYSQL_ROOT_PASSWORD: 31337
+      MYSQL_USER: shaq
+      MYSQL_PASSWORD: 1337
